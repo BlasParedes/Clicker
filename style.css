@@ -1,0 +1,49 @@
+#izquierda{
+	position: relative;
+	height: 100%;
+	width: 33.33%;
+	left: 0px;
+}
+
+#centro{
+	position: relative;
+	height: 100%;
+	width: 33.33%;
+	padding: 0;
+	top: 10%;
+	left: 33.33%;
+	right: 33.33%;
+}
+
+#derecha{
+	position: relative;
+	height: 100%;
+	width: 33.33%;
+	right: 33.33%;
+
+}
+
+
+#producto{
+	width: 65%;
+	height: 65%;
+	animation-name: animacion;
+	animation-duration: 1s;
+}
+
+#producto:hover
+{
+	-webkit-transform:scale(1.05,1.05);opacity:0.9;
+	-moz-transform:scale(1.05,1.05);opacity:0.9;
+	-ms-transform:scale(1.05,1.05);opacity:0.9;
+	-o-transform:scale(1.05,1.05);opacity:0.9;
+	transform:scale(1.05,1.05);opacity:0.9;
+}
+#producto:active
+{
+	-webkit-transform:scale(0.98,0.98);opacity:1;
+	-moz-transform:scale(0.98,0.98);opacity:1;
+	-ms-transform:scale(0.98,0.98);opacity:1;
+	-o-transform:scale(0.98,0.98);opacity:1;
+	transform:scale(0.98,0.98);opacity:1;
+}
