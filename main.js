@@ -71,7 +71,7 @@ function Game(equipo){
 	//Jugador activo determina si han pasado 5 minutos desde la ultima vez que se le dio click
 	function jugadorActivo(){
 		var tiempoActual = new Date().getTime()/1000;
-		return (tiempoActual-activo)<=300;
+		return (tiempoActual-activo)<=10;
 	}
 
 	function tiempoCorrecto(){ //arreglar
@@ -80,6 +80,13 @@ function Game(equipo){
 
 	function incrementarRacha(incremento=0.1){
 		racha+=incremento;
+
+	}
+	function reinicio(){
+		dineroActual = 1;
+		tiempo = new Date().getTime()/1000;
+		racha = 1;
+		actual = activo = pasado = tiempo;
 
 	}
 	//Ciclo principal del juego
@@ -98,7 +105,13 @@ function Game(equipo){
 		pasado = new Date().getTime()/1000;
 
 		if( jugadorActivo() === false ){ 
-			alert('jugador inactivo');//reiniciar juegoS
+
+			var resp = confirm("Jugador inactivo");
+
+			if(resp || !resp){
+				reinicio();
+			}
+			//reiniciar juegoS
 		}
 		//alert(Math.floor(actual-tiempo));
 
